@@ -1,2 +1,2 @@
-# AR2023
- Realidad Aumentada
+# AR2023-Aframe
+ Ejercicios de Realidad Aumentada usando A-Frame
