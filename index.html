@@ -17,6 +17,8 @@
     <title>Realidad Aumentada v0.1</title>
 </head>
 <body>
+    <!--Presenta un modelo 3D a través del escaneo de un marcador Hiro-->
+    <!-- 
         <a-scene embedded arjs>
             <a-marker preset="hiro">
                 <a-entity
@@ -28,5 +30,39 @@
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
+    -->
+
+    <!--Presenta una imagen a través del marcador Hiro-->
+    <!--
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-image src="public/img/01.png"
+                position="0 0.0 0"
+                rotation="-90 0 0"
+                width="3"
+                height="1.5"
+                ></a-image>
+
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+-->
+
+
+    <!--Presenta una imagen a través del marcador Hiro-->
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-image src="public/img/01.png"
+                position="0 0.0 0"
+                rotation="-90 0 0"
+                width="3"
+                height="1.5"
+                ></a-image>
+
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+
+
 </body>
 </html>
