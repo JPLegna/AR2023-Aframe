@@ -52,15 +52,18 @@
     <!--Presenta una imagen a través del marcador Hiro-->
     <!-- inf 01-->
     <a-scene embedded arjs>
-        <a-marker preset="hiro">
+        <!--<a-marker preset="hiro">-->
+        <a-marker-camera type='pattern' url='path/to/pattern-marker.patt'>
             <a-image src="public/img/inf 01.jpg"
                 position="0 0.0 0"
                 rotation="-90 0 0"
-                width="3"
-                height="1.5"
+                width="1.5"
+                height="3"
                 ></a-image>
 
-        </a-marker>
+            </a-marker-camera>
+
+        <!--</a-marker>-->
         <a-entity camera></a-entity>
     </a-scene>
 
