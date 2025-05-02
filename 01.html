@@ -11,21 +11,21 @@
 <body>
 
     <a-scene embedded arjs>
-       <a-marker type="pattern" url="marker/pattern-01.patt">
-    <a-entity
-        geometry="primitive: plane; width: 1.5; height: 3;"
-        position="0 0.0 0"
-        rotation="-90 0 0"
-        material="shader: flat; side: double; transparent: true; opacity: 1;"
-    >
-        <a-entity
-            id="youtube-video"
-            position="0 0 0.01"
-        >
-            <iframe width="480" height="800" src="https://drive.google.com/file/d/1oUiDwnXBynxATK4aT9tQ_x1iRs7rqE_L/view?usp=drive_link" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </a-entity>
-    </a-entity>
-</a-marker>
+        <a-marker type="pattern" url="marker/pattern-01.patt">
+            <a-entity
+                geometry="primitive: plane; width: 1.5; height: 3;"
+                position="0 0.0 0"
+                rotation="-90 0 0"
+                material="shader: flat; side: double; transparent: true; opacity: 1;"
+            >
+                <a-entity
+                    id="youtube-video"
+                    position="0 0 0.01"
+                >
+                    <iframe width="480" height="800" src="https://www.youtube.com/embed/8?autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </a-entity>
+            </a-entity>
+        </a-marker>
 
           <a-entity camera></a-entity>
 
