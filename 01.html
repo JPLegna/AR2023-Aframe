@@ -2,20 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <title>Video en Realidad Aumentada</title>
+  <title>Video AR con sonido</title>
 </head>
 <body style="margin: 0; overflow: hidden">
+
+  <!-- Botón de inicio -->
+  <button id="startBtn" style="
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  ">
+    Iniciar video con sonido
+  </button>
+
   <a-scene embedded arjs>
     <a-assets>
       <video
         id="video"
-        src="public/video/Presentación MEMTI.mp4"  <!-- Cambia esto por la URL real del video -->
+        src="public/video/Presentación MEMTI.mp4" <!-- Sustituye por tu URL real -->
         preload="auto"
         loop
-        muted
         playsinline
         webkit-playsinline
         crossorigin="anonymous"
@@ -38,14 +50,24 @@
   <script>
     const marker = document.querySelector("#marker");
     const video = document.querySelector("#video");
+    const startBtn = document.querySelector("#startBtn");
+
+    let canPlay = false;
+
+    startBtn.addEventListener("click", () => {
+      canPlay = true;
+      video.play();
+      startBtn.style.display = "none"; // Oculta el botón
+    });
 
     marker.addEventListener("markerFound", () => {
-      video.play();
+      if (canPlay) video.play();
     });
 
     marker.addEventListener("markerLost", () => {
       video.pause();
     });
   </script>
+
 </body>
 </html>
