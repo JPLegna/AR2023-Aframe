@@ -4,40 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <link rel="icon" href="data:,">
-    <!--A-frame, por el momento uso la versión 1.3.0 para que pueda renderisar la textura-->
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <!-- LOCAL: aframe.min.js versión 1.3.0 -->
-    <!--<script src="/aframe_js/1.3.0 aframe.min.js"></script>-->
-
-    <!--AR.js para aframe-->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <!-- LOCAL: aframe-ar.js-->
-    <!--<script src="/aframe_js/aframe-ar.js"></script>-->
-    
     <title>Realidad Aumentada v0.1</title>
 </head>
 <body>
 
-    <!--Presenta una imagen a través del marcador Hiro-->
     <a-scene embedded arjs>
-       <!-- inf 01  marcador01-->
-       <a-marker type="pattern" url="marker/pattern-01.patt">
-        <a-image src="public/img/inf 01.jpg"
-            position="0 0.0 0"
-            rotation="-90 0 0"
-            width="1.5"
-            height="3">
-        </a-image>
-    </a-marker>
+        <a-marker type="pattern" url="marker/pattern-01.patt">
+            <a-video src="https://drive.google.com/file/d/1oUiDwnXBynxATK4aT9tQ_x1iRs7rqE_L/view?usp=sharing"
+                     position="0 0.0 0"
+                     rotation="-90 0 0"
+                     width="1.5"
+                     height="3"
+                     autoplay
+                     loop
+                     playsinline>
+            </a-video>
+        </a-marker>
 
-
-
-
-
-            <a-entity camera></a-entity>
+          <a-entity camera></a-entity>
 
     </a-scene>
-
 
 </body>
 </html>
