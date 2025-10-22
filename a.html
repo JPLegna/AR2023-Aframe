@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <link rel="icon" href="data:,">
-    <!-- A-frame 1.3.0 -->
+    <!--A-frame, por el momento uso la versión 1.3.0 para que pueda renderisar la textura-->
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <!-- AR.js para aframe -->
+    <!-- LOCAL: aframe.min.js versión 1.3.0 -->
+    <!--<script src="/aframe_js/1.3.0 aframe.min.js"></script>-->
+
+    <!--AR.js para aframe-->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- LOCAL: aframe-ar.js-->
+    <!--<script src="/aframe_js/aframe-ar.js"></script>-->
+    
     <title>Realidad Aumentada v0.1</title>
 </head>
 <body>
+
+
+
+    
     <a-scene embedded arjs>
         <!-- marcador personalizado con modelo 3D -->
         <a-marker type="pattern" url="marker/pattern-02.patt">
@@ -23,5 +33,12 @@
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
+
+
+   <a-entity camera></a-entity>
+
+    </a-scene>
+
+
 </body>
 </html>
